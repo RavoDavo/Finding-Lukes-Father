@@ -4,21 +4,22 @@
 * Author: Theodore Psillos (PSLTHE001)
 * Patners: Michael Millard (MLLMIC055) & David Da Costa (DCSDAV001)
 * Supervisor: Chris Hill
-* Last Date Modified: 13/05/2022
+* Last Date Modified: 17/05/2022
 *
 * Commands needed to run this file:
 *	g++ sobel.cpp -o sobel.out -lOpenCL ----> compiles file and creates an executable file
 *	./sobel.out chess.pgm 100 35  ----> runs the executable file on the chess image for a high threshold of 100 and
-*										a signam value of 1
+*										low threshold value of 35
 *******************************************************************************************************************/
 
-#include<stdio.h>
-#include<CL/cl.h>
-#include<iostream>
-#include<fstream>
-#include<string>
-#include<cmath>
+#include <stdio.h>
+#include <CL/cl.h>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cmath>
 #include <tuple>
+#include <vector>
 
 using namespace std;
 
@@ -40,15 +41,14 @@ int main(int argc, char **argv)
 		return 0;
 	}	
 
-	ofstream img_mag("./output_images/sobel_mag.pgm", ios::binary);
-	ofstream img_hi("./output_images/sobel_hi.pgm", ios::binary);
-	ofstream img_lo("./output_images/sobel_lo.pgm", ios::binary);
-	ofstream img_x("./output_images/sobel_x.pgm", ios::binary);
-	ofstream img_y("./output_images/sobel_y.pgm", ios::binary);
+	ofstream img_mag("./output_images/SobelMag_"+filename, ios::binary);
+	ofstream img_hi("./output_images/SobelHi_"+filename, ios::binary);
+	ofstream img_lo("./output_images/SobelLow_"+filename, ios::binary);
+	ofstream img_x("./output_images/SobelX_"+filename, ios::binary);
+	ofstream img_y("./output_images/SobelY_"+filename, ios::binary);
 
 	char buffer[1024];
 	int width, height, intensity, hi = stoi(argv[2]), lo = stoi(argv[3]);
-	int sumx, sumy;
 
 	// Storing header information and copying into the new ouput images
 	infile  >> buffer >> width >> height >> intensity;
@@ -69,7 +69,9 @@ int main(int argc, char **argv)
 
 	// setting up the OpenCL
 	clock_t start, end;  //Timers to for execution timing & performance
-	 
+	clock_t start0, end0;
+
+	start0 = clock();
 	//Initialize Buffers, memory space the allows for communication between the host and the target device
 	cl_mem width_buffer, height_buffer, input_buffer, xConv_buffer, yConv_buffer, size_buffer, magOutput_buffer;
 
@@ -89,13 +91,13 @@ int main(int argc, char **argv)
 	//Outputs the information of the chosen platform
 	char* Info = (char*)malloc(0x1000*sizeof(char));
 	clGetPlatformInfo(platform, CL_PLATFORM_NAME      , 0x1000, Info, 0);
-	printf("Name      : %s\n", Info);
+	//printf("Name      : %s\n", Info);
 	clGetPlatformInfo(platform, CL_PLATFORM_VENDOR    , 0x1000, Info, 0);
-	printf("Vendor    : %s\n", Info);
+	//printf("Vendor    : %s\n", Info);
 	clGetPlatformInfo(platform, CL_PLATFORM_VERSION   , 0x1000, Info, 0);
-	printf("Version   : %s\n", Info);
+	//printf("Version   : %s\n", Info);
 	clGetPlatformInfo(platform, CL_PLATFORM_PROFILE   , 0x1000, Info, 0);
-	printf("Profile   : %s\n", Info);
+	//printf("Profile   : %s\n", Info);
 
 	// get device ID must first get platform
 	cl_device_id device; //this is your deviceID
@@ -107,7 +109,7 @@ int main(int argc, char **argv)
 	if(err == CL_DEVICE_NOT_FOUND) {
 		err = clGetDeviceIDs(platform, CL_DEVICE_TYPE_CPU, 1, &device, NULL);
 	}
-	printf("Device ID = %i\n",err);
+	//printf("Device ID = %i\n",err);
 
 	// creates a context that allows devices to send and receive kernels and transfer data
 	cl_context context; //This is your contextID, the line below must just run
@@ -136,7 +138,7 @@ int main(int argc, char **argv)
 
 	// build the program, this compiles the source code from above for the devices that the code has to run on (ie GPU or CPU)
 	cl_int err3= clBuildProgram(program, 0, NULL, NULL, NULL, NULL);
-	printf("program ID = %i\n", err3);
+	//printf("program ID = %i\n", err3);
 
 	// creates the kernel, this creates a kernel from one of the functions in the cl_program you just built
 	// select the kernel you are running
@@ -152,7 +154,7 @@ int main(int argc, char **argv)
 	int magOutput[global_size];
 	int xConv[global_size];
 	int yConv[global_size];
-   
+	
 	//Buffer (memory block) that both the host and target device can access 
 	width_buffer = clCreateBuffer(context,CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR,sizeof(int), &width, &err);
 	height_buffer = clCreateBuffer(context,CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR,sizeof(int), &height, &err);
@@ -171,10 +173,11 @@ int main(int argc, char **argv)
 	clSetKernelArg(kernel, 5, sizeof(cl_mem), &size_buffer);
 	clSetKernelArg(kernel, 6, sizeof(cl_mem), &magOutput_buffer);
 	
+	start = clock();
 	//enqueue kernel, deploys the kernels and determines the number of work-items that should be generated to execute the kernel (global_size) and the number of work-items in each work-group (local_size).
 	cl_int err4 = clEnqueueNDRangeKernel(queue, kernel, 1, NULL, &global_size, &local_size, 0, NULL, NULL); 
 	
-	printf("\nKernel check: %i \n",err4);
+	//printf("\nKernel check: %i \n",err4);
 
 	// Allows the host to read from the buffer object 
 	err = clEnqueueReadBuffer(queue, xConv_buffer, CL_TRUE, 0, sizeof(xConv), xConv, 0, NULL, NULL);
@@ -189,72 +192,56 @@ int main(int argc, char **argv)
 	int maxx = 0; 
 	int maxy = 0;
 
-	for (int j = 0; j < Size; j++)
-	{
+	for (int j = 0; j < Size; j++){
 		if (xConv[j] > maxx)
-		{ 
 			maxx = xConv[j];
-		}
 
 		if (yConv[j] > maxy)
-		{ 
 			maxy = yConv[j];
-		}
 
 		if (magOutput[j] > maxy)
-		{ 
 			maxVal = magOutput[j];
-		}
 	}	
 
-	int tempx;
 	// Make sure all the magnitude values are between 0-255
-	for (int z = 0; z < Size; z++)
-	{
+	for (int z = 0; z < Size; z++){
 		xConv[z] = xConv[z] * 255 / maxx;
 		yConv[z] = yConv[z] * 255 / maxy;
 		magOutput[z] = magOutput[z] * 255 / maxVal;
 	}	
 
-	/*for (int z = 0; z < Size; z++)
-	{
-		printf("Input image: %i \n", magOutput[z]); 
-	}*/
-
-	printf("\nMaxx: %i \n",maxx); 
-	printf("Maxy: %i \n",maxy);
-	printf("MaxVal: %i \n",maxVal);  
+	//printf("\nMaxx: %i \n",maxx); 
+	//printf("Maxy: %i \n",maxy);
+	//printf("MaxVal: %i \n",maxVal);  
 
 	// Make sure to cast back to char before outputting
 	// Also to avoid any wonky results, get rid of any decimals by casting to int first
-	for (int i = 0; i < Size; i++){
+	for (int j = 0; j < Size; j++){
 		// Output the x image
-		img_x << (char)(xConv[i]);
+		img_x << (char)((int)xConv[j]);
 
 		// Output the y image
-		img_y << (char)(yConv[i]);
+		img_y << (char)((int)yConv[j]);
 
 		// Output the magnitude image
-		img_mag << (char)(magOutput[i]);
+		img_mag << (char)((int)magOutput[j]);
 
 		// Ouput the low threshold image
-		if (magOutput[i] > lo){
+		if (magOutput[j] > lo)
 			img_lo << (char)255;
-		}
-
-		else{
+		else
 			img_lo << (char)0;
-		}
-		// Ouput the high threshold image
-		if (magOutput[i] > hi){
-			img_hi << (char)255;
-		}
 
-		else{
+		// Ouput the high threshold image
+		if (magOutput[j] > hi)
+			img_hi << (char)255;
+		else
 			img_hi << (char)0;
-		}
 	}
-	
+	end = clock();
+	double time_ex = ((float) end - start0)/CLOCKS_PER_SEC;
+	printf(" %f \n", time_ex);
+
 	// Deallocate all the OpenCL resources			
 	clReleaseKernel(kernel);
 	clReleaseMemObject(width_buffer);
@@ -267,5 +254,6 @@ int main(int argc, char **argv)
 	clReleaseCommandQueue(queue);
 	clReleaseProgram(program);
 	clReleaseContext(context);
+
 	return 0;;
 }

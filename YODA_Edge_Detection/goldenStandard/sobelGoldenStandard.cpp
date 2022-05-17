@@ -4,7 +4,7 @@
 * Author: Theodore Psillos (PSLTHE001)
 * Patners: Michael Millard (MLLMIC055) & David Da Costa (DCSDAV001)
 * Supervisor: Chris Hill
-* Last Date Modified: 13/05/2022
+* Last Date Modified: 17/05/2022
 *
 * Original Author: Soliman Alnaizy
 * Reference: https://github.com/sorazy/canny/blob/master/sobel.cpp
@@ -12,7 +12,7 @@
 * Commands needed to run this file:
 *	g++ sobelGoldenStandard.cpp -o sobelGoldenStandard.out ----> compiles file and creates an executable file
 *	./sobelGoldenStandard.out anakin.pgm 100 35 ----> runs the executable file on the anakin image for a high threshold 
-*													 of 100 and a low threshold value of 1
+*													 of 100 and a low threshold value of 35
 *********************************************************************************************************************/
 
 #include <cmath>
@@ -52,6 +52,8 @@ int main(int argc, char **argv)
 	int width, height, intensity, hi = stoi(argv[2]), lo = stoi(argv[3]);
 	int sumx, sumy;
 
+	clock_t start, end;  //Timers to for execution timing & performance
+
 	// Storing header information and copying into the new ouput images
 	infile  >> buffer >> width >> height >> intensity;
 	img_mag << buffer << endl << width << " " << height << endl << intensity << endl;
@@ -71,6 +73,7 @@ int main(int argc, char **argv)
 	// mr stands for maskRadius
 	// This does the scanning convultion of the masks declared above, and stores
 	// the values in the matrices outputx and outputy
+	start = clock();
 	int mr = 1;
 	int maxx = 0, maxy = 0;
 	for (int i = 0; i < height; i++)
@@ -158,5 +161,10 @@ int main(int argc, char **argv)
 				img_hi << (char)0;
 		}
 	}
+	
+	end = clock();
+	double time_ex = ((float) end - start)/CLOCKS_PER_SEC;
+	printf(" %f \n", time_ex);
+
 	return 0;
 }
