@@ -1,0 +1,180 @@
+ 0.004712 
+ 0.004923 
+ 0.005114 
+ 0.005116 
+ 0.005117 
+ 0.005113 
+ 0.005225 
+ 0.004987 
+ 0.004824 
+ 0.004804 
+ 0.004866 
+ 0.004847 
+ 0.004841 
+ 0.004801 
+ 0.004792 
+ 0.006985 
+ 0.006900 
+ 0.006941 
+ 0.006936 
+ 0.006918 
+ 0.006910 
+ 0.006907 
+ 0.006907 
+ 0.006900 
+ 0.006936 
+ 0.006912 
+ 0.006895 
+ 0.006908 
+ 0.006956 
+ 0.006953 
+ 0.009421 
+ 0.009428 
+ 0.009524 
+ 0.009421 
+ 0.009390 
+ 0.009401 
+ 0.009411 
+ 0.009399 
+ 0.009354 
+ 0.009437 
+ 0.009356 
+ 0.009377 
+ 0.009430 
+ 0.009468 
+ 0.009382 
+ 0.012279 
+ 0.012246 
+ 0.012229 
+ 0.012088 
+ 0.012094 
+ 0.012120 
+ 0.012089 
+ 0.012167 
+ 0.012095 
+ 0.012095 
+ 0.012092 
+ 0.012127 
+ 0.012121 
+ 0.012393 
+ 0.012143 
+ 0.015404 
+ 0.015408 
+ 0.015758 
+ 0.015436 
+ 0.015459 
+ 0.015397 
+ 0.015466 
+ 0.015398 
+ 0.015426 
+ 0.015456 
+ 0.015444 
+ 0.015432 
+ 0.015396 
+ 0.015424 
+ 0.015448 
+ 0.019069 
+ 0.019042 
+ 0.019454 
+ 0.019224 
+ 0.019032 
+ 0.019189 
+ 0.019216 
+ 0.019211 
+ 0.019068 
+ 0.019047 
+ 0.019200 
+ 0.019062 
+ 0.019048 
+ 0.019038 
+ 0.019062 
+The Golden Measure Execution Time is: 0.004708 seconds 
+The Golden Measure Execution Time is: 0.004814 seconds 
+The Golden Measure Execution Time is: 0.004942 seconds 
+The Golden Measure Execution Time is: 0.005114 seconds 
+The Golden Measure Execution Time is: 0.005114 seconds 
+The Golden Measure Execution Time is: 0.005105 seconds 
+The Golden Measure Execution Time is: 0.005112 seconds 
+The Golden Measure Execution Time is: 0.005122 seconds 
+The Golden Measure Execution Time is: 0.005094 seconds 
+The Golden Measure Execution Time is: 0.005274 seconds 
+The Golden Measure Execution Time is: 0.005115 seconds 
+The Golden Measure Execution Time is: 0.005111 seconds 
+The Golden Measure Execution Time is: 0.005113 seconds 
+The Golden Measure Execution Time is: 0.005112 seconds 
+The Golden Measure Execution Time is: 0.004790 seconds 
+The Golden Measure Execution Time is: 0.006953 seconds 
+The Golden Measure Execution Time is: 0.006931 seconds 
+The Golden Measure Execution Time is: 0.006927 seconds 
+The Golden Measure Execution Time is: 0.006893 seconds 
+The Golden Measure Execution Time is: 0.006865 seconds 
+The Golden Measure Execution Time is: 0.006894 seconds 
+The Golden Measure Execution Time is: 0.007016 seconds 
+The Golden Measure Execution Time is: 0.007029 seconds 
+The Golden Measure Execution Time is: 0.007055 seconds 
+The Golden Measure Execution Time is: 0.006945 seconds 
+The Golden Measure Execution Time is: 0.006934 seconds 
+The Golden Measure Execution Time is: 0.006952 seconds 
+The Golden Measure Execution Time is: 0.006966 seconds 
+The Golden Measure Execution Time is: 0.006944 seconds 
+The Golden Measure Execution Time is: 0.006954 seconds 
+The Golden Measure Execution Time is: 0.009475 seconds 
+The Golden Measure Execution Time is: 0.009438 seconds 
+The Golden Measure Execution Time is: 0.009432 seconds 
+The Golden Measure Execution Time is: 0.009431 seconds 
+The Golden Measure Execution Time is: 0.009386 seconds 
+The Golden Measure Execution Time is: 0.009414 seconds 
+The Golden Measure Execution Time is: 0.009394 seconds 
+The Golden Measure Execution Time is: 0.009359 seconds 
+The Golden Measure Execution Time is: 0.009388 seconds 
+The Golden Measure Execution Time is: 0.009404 seconds 
+The Golden Measure Execution Time is: 0.009408 seconds 
+The Golden Measure Execution Time is: 0.009437 seconds 
+The Golden Measure Execution Time is: 0.009418 seconds 
+The Golden Measure Execution Time is: 0.009416 seconds 
+The Golden Measure Execution Time is: 0.009446 seconds 
+The Golden Measure Execution Time is: 0.012237 seconds 
+The Golden Measure Execution Time is: 0.012189 seconds 
+The Golden Measure Execution Time is: 0.012225 seconds 
+The Golden Measure Execution Time is: 0.012587 seconds 
+The Golden Measure Execution Time is: 0.012492 seconds 
+The Golden Measure Execution Time is: 0.012363 seconds 
+The Golden Measure Execution Time is: 0.012122 seconds 
+The Golden Measure Execution Time is: 0.012135 seconds 
+The Golden Measure Execution Time is: 0.012187 seconds 
+The Golden Measure Execution Time is: 0.012138 seconds 
+The Golden Measure Execution Time is: 0.012182 seconds 
+The Golden Measure Execution Time is: 0.012252 seconds 
+The Golden Measure Execution Time is: 0.012348 seconds 
+The Golden Measure Execution Time is: 0.012227 seconds 
+The Golden Measure Execution Time is: 0.012215 seconds 
+The Golden Measure Execution Time is: 0.015575 seconds 
+The Golden Measure Execution Time is: 0.015578 seconds 
+The Golden Measure Execution Time is: 0.015598 seconds 
+The Golden Measure Execution Time is: 0.015539 seconds 
+The Golden Measure Execution Time is: 0.015582 seconds 
+The Golden Measure Execution Time is: 0.015542 seconds 
+The Golden Measure Execution Time is: 0.015635 seconds 
+The Golden Measure Execution Time is: 0.015621 seconds 
+The Golden Measure Execution Time is: 0.015588 seconds 
+The Golden Measure Execution Time is: 0.015561 seconds 
+The Golden Measure Execution Time is: 0.015576 seconds 
+The Golden Measure Execution Time is: 0.015574 seconds 
+The Golden Measure Execution Time is: 0.015635 seconds 
+The Golden Measure Execution Time is: 0.015588 seconds 
+The Golden Measure Execution Time is: 0.015474 seconds 
+The Golden Measure Execution Time is: 0.019229 seconds 
+The Golden Measure Execution Time is: 0.019291 seconds 
+The Golden Measure Execution Time is: 0.019300 seconds 
+The Golden Measure Execution Time is: 0.019234 seconds 
+The Golden Measure Execution Time is: 0.019281 seconds 
+The Golden Measure Execution Time is: 0.019281 seconds 
+The Golden Measure Execution Time is: 0.019229 seconds 
+The Golden Measure Execution Time is: 0.019197 seconds 
+The Golden Measure Execution Time is: 0.019154 seconds 
+The Golden Measure Execution Time is: 0.019162 seconds 
+The Golden Measure Execution Time is: 0.019098 seconds 
+The Golden Measure Execution Time is: 0.019217 seconds 
+The Golden Measure Execution Time is: 0.019144 seconds 
+The Golden Measure Execution Time is: 0.019210 seconds 
+The Golden Measure Execution Time is: 0.019163 seconds 

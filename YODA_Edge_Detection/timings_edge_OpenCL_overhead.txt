@@ -1,0 +1,180 @@
+ 0.048102 
+ 0.038287 
+ 0.038300 
+ 0.036864 
+ 0.038401 
+ 0.039008 
+ 0.038042 
+ 0.038370 
+ 0.039032 
+ 0.038906 
+ 0.037663 
+ 0.038704 
+ 0.038317 
+ 0.038925 
+ 0.038522 
+ 0.038410 
+ 0.038755 
+ 0.038517 
+ 0.039071 
+ 0.038731 
+ 0.038782 
+ 0.038528 
+ 0.038387 
+ 0.038243 
+ 0.038513 
+ 0.039002 
+ 0.039137 
+ 0.038410 
+ 0.038525 
+ 0.040117 
+ 0.039224 
+ 0.038778 
+ 0.039154 
+ 0.038868 
+ 0.038710 
+ 0.037959 
+ 0.039060 
+ 0.038741 
+ 0.038744 
+ 0.039143 
+ 0.038815 
+ 0.038781 
+ 0.039835 
+ 0.039017 
+ 0.038644 
+ 0.039123 
+ 0.039363 
+ 0.040010 
+ 0.039254 
+ 0.039368 
+ 0.039161 
+ 0.039363 
+ 0.039591 
+ 0.039051 
+ 0.038970 
+ 0.039843 
+ 0.039212 
+ 0.039146 
+ 0.038754 
+ 0.039137 
+ 0.039304 
+ 0.040490 
+ 0.039581 
+ 0.039416 
+ 0.039542 
+ 0.039504 
+ 0.039264 
+ 0.039676 
+ 0.039889 
+ 0.039761 
+ 0.039118 
+ 0.039729 
+ 0.039577 
+ 0.039589 
+ 0.039493 
+ 0.040338 
+ 0.039849 
+ 0.040349 
+ 0.041153 
+ 0.039681 
+ 0.039843 
+ 0.039680 
+ 0.040177 
+ 0.040330 
+ 0.040027 
+ 0.040423 
+ 0.039894 
+ 0.039659 
+ 0.040074 
+ 0.039620 
+The OpenCL Execution Time is: 0.000949 seconds 
+The OpenCL Execution Time is: 0.000964 seconds 
+The OpenCL Execution Time is: 0.001008 seconds 
+The OpenCL Execution Time is: 0.000973 seconds 
+The OpenCL Execution Time is: 0.000983 seconds 
+The OpenCL Execution Time is: 0.001032 seconds 
+The OpenCL Execution Time is: 0.000954 seconds 
+The OpenCL Execution Time is: 0.000952 seconds 
+The OpenCL Execution Time is: 0.000954 seconds 
+The OpenCL Execution Time is: 0.001049 seconds 
+The OpenCL Execution Time is: 0.000971 seconds 
+The OpenCL Execution Time is: 0.000969 seconds 
+The OpenCL Execution Time is: 0.000951 seconds 
+The OpenCL Execution Time is: 0.000973 seconds 
+The OpenCL Execution Time is: 0.000960 seconds 
+The OpenCL Execution Time is: 0.001311 seconds 
+The OpenCL Execution Time is: 0.001314 seconds 
+The OpenCL Execution Time is: 0.001311 seconds 
+The OpenCL Execution Time is: 0.001343 seconds 
+The OpenCL Execution Time is: 0.001307 seconds 
+The OpenCL Execution Time is: 0.001308 seconds 
+The OpenCL Execution Time is: 0.001320 seconds 
+The OpenCL Execution Time is: 0.001385 seconds 
+The OpenCL Execution Time is: 0.001349 seconds 
+The OpenCL Execution Time is: 0.001370 seconds 
+The OpenCL Execution Time is: 0.001403 seconds 
+The OpenCL Execution Time is: 0.001315 seconds 
+The OpenCL Execution Time is: 0.001359 seconds 
+The OpenCL Execution Time is: 0.001304 seconds 
+The OpenCL Execution Time is: 0.001315 seconds 
+The OpenCL Execution Time is: 0.001735 seconds 
+The OpenCL Execution Time is: 0.001778 seconds 
+The OpenCL Execution Time is: 0.001799 seconds 
+The OpenCL Execution Time is: 0.001780 seconds 
+The OpenCL Execution Time is: 0.001758 seconds 
+The OpenCL Execution Time is: 0.001766 seconds 
+The OpenCL Execution Time is: 0.001773 seconds 
+The OpenCL Execution Time is: 0.001771 seconds 
+The OpenCL Execution Time is: 0.001761 seconds 
+The OpenCL Execution Time is: 0.001736 seconds 
+The OpenCL Execution Time is: 0.001804 seconds 
+The OpenCL Execution Time is: 0.001752 seconds 
+The OpenCL Execution Time is: 0.001799 seconds 
+The OpenCL Execution Time is: 0.001766 seconds 
+The OpenCL Execution Time is: 0.001743 seconds 
+The OpenCL Execution Time is: 0.002256 seconds 
+The OpenCL Execution Time is: 0.002255 seconds 
+The OpenCL Execution Time is: 0.002268 seconds 
+The OpenCL Execution Time is: 0.002247 seconds 
+The OpenCL Execution Time is: 0.002294 seconds 
+The OpenCL Execution Time is: 0.002347 seconds 
+The OpenCL Execution Time is: 0.002280 seconds 
+The OpenCL Execution Time is: 0.002283 seconds 
+The OpenCL Execution Time is: 0.002292 seconds 
+The OpenCL Execution Time is: 0.002255 seconds 
+The OpenCL Execution Time is: 0.002306 seconds 
+The OpenCL Execution Time is: 0.002268 seconds 
+The OpenCL Execution Time is: 0.002258 seconds 
+The OpenCL Execution Time is: 0.002252 seconds 
+The OpenCL Execution Time is: 0.002246 seconds 
+The OpenCL Execution Time is: 0.002772 seconds 
+The OpenCL Execution Time is: 0.002753 seconds 
+The OpenCL Execution Time is: 0.002790 seconds 
+The OpenCL Execution Time is: 0.002782 seconds 
+The OpenCL Execution Time is: 0.002770 seconds 
+The OpenCL Execution Time is: 0.002758 seconds 
+The OpenCL Execution Time is: 0.002784 seconds 
+The OpenCL Execution Time is: 0.002761 seconds 
+The OpenCL Execution Time is: 0.002760 seconds 
+The OpenCL Execution Time is: 0.002817 seconds 
+The OpenCL Execution Time is: 0.002802 seconds 
+The OpenCL Execution Time is: 0.002774 seconds 
+The OpenCL Execution Time is: 0.002791 seconds 
+The OpenCL Execution Time is: 0.002844 seconds 
+The OpenCL Execution Time is: 0.002807 seconds 
+The OpenCL Execution Time is: 0.003426 seconds 
+The OpenCL Execution Time is: 0.003443 seconds 
+The OpenCL Execution Time is: 0.003341 seconds 
+The OpenCL Execution Time is: 0.003360 seconds 
+The OpenCL Execution Time is: 0.003393 seconds 
+The OpenCL Execution Time is: 0.003355 seconds 
+The OpenCL Execution Time is: 0.003356 seconds 
+The OpenCL Execution Time is: 0.003379 seconds 
+The OpenCL Execution Time is: 0.003356 seconds 
+The OpenCL Execution Time is: 0.003370 seconds 
+The OpenCL Execution Time is: 0.003345 seconds 
+The OpenCL Execution Time is: 0.003357 seconds 
+The OpenCL Execution Time is: 0.003355 seconds 
+The OpenCL Execution Time is: 0.003362 seconds 
+The OpenCL Execution Time is: 0.003377 seconds 
